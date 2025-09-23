@@ -42,4 +42,25 @@ def cadastrar_livro(titulo, autor, ano):
      """, titulo, autor, ano, "Sim")
 # • Todo livro novo deve ser cadastrado com
 # disponivel = "Sim".
-     
+
+# Etapa 3 – Listagem de Livros
+# <!-- • Criar uma função listar_livros() que mostre todos os -->
+# <!-- livros cadastrados. -->
+def listar_livro():
+    conexao = sqlite3.connect("biblioteca.db")
+    cursor = conexao.cursor()
+    
+    cursor.execute("SELECT id, titulo, autor, ano, disponível FROM livros")
+    livros = cursor.fetchall() 
+    # para recuperar todas as linhas restantes 
+    print("Lista de livros cadastrados")
+
+    print("{:<5} {:<30} {:<20} {:<6} {:<12}".format("ID", "Titulo", "Autor", "Ano", "Disponível"))
+    print("-" * 50)
+    
+    for livro in livros:
+        print("{:<5} {:<30} {:<20} {:<6} {:<12}".format(livro[0], livro[1], livro[2], livro[3], livro[4]))
+        # • Exibir colunas: ID, Título, Autor, Ano, Disponibilidade.
+        if __name__ == "__main__":
+            criar_tabela()
+            listar_livros()
