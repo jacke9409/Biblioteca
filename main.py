@@ -29,3 +29,17 @@ print("Banco de dados e tabela 'livros' criados com sucesso.")
 # o autor → texto obrigatório.
 # o ano → número inteiro.
 # o disponível → texto (valores "Sim" ou "Não").
+# segundo commit
+# Etapa 2 – Função de Cadastro
+def cadastrar_livro(titulo, autor, ano):
+    conn = conectar()
+    cursor = conn.cursor()
+# função cadastrar_livro(titulo, autor, ano) que insere um
+# livro na tabela.
+    cursor.execute("""
+     INSERT INTO LIVROS(titulo, autor, ano, disponível)
+     VALUES  (?, ?, ?, ?)
+     """, titulo, autor, ano, "Sim")
+# • Todo livro novo deve ser cadastrado com
+# disponivel = "Sim".
+     
