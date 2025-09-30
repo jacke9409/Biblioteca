@@ -1,7 +1,7 @@
 # <!-- main.py(logica do codigo e menu) -->
 import sqlite3 
 # Conectar ao banco biblioteca.db.
-import sqlite3
+# import sqlite3
 
 # Conectar ao banco de dados
 conn = sqlite3.connect('biblioteca.db')
@@ -64,3 +64,12 @@ def listar_livro():
         if __name__ == "__main__":
             criar_tabela()
             listar_livros()
+# Etapa 4 – Atualização de Disponibilidade
+def atualizar_disponibilidade(id_livro):
+    try:
+        conn = sqlite3.connect('biblioteca.db')
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT disponivel FROM livros WHERE id = ?", (id_livro,))
+        resultado = cursor.fetchone()
+

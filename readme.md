@@ -24,3 +24,9 @@ disponivel = "Sim". -->
 <!-- livros cadastrados. -->
 <!-- • Exibir colunas: ID, Título, Autor, Ano, Disponibilidade. -->
 <!-- Commit esperado: "Etapa 3 - Função Listagem de livros" -->
+
+<!-- Etapa 4 – Atualização de Disponibilidade -->
+
+<!-- • Criar função que altere o campo disponivel: -->
+<!-- o Se estava "Sim", vira "Não". -->
+<!-- o Se estava "Não", vira "Sim". -->
