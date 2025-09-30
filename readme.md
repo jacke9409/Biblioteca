@@ -36,3 +36,14 @@ disponivel = "Sim". -->
 <!-- pelo ID. -->
 <!-- Commit esperado: "Etapa 5 - Função de remoção de livros -->
 <!-- implementada" -->
+
+<!-- Etapa 6 – Menu Interativo no Console -->
+<!-- • Implementar um menu de opções no main.py: -->
+<!-- 1. Cadastrar livro -->
+<!-- 2. Listar livros -->
+<!-- 3. Atualizar disponibilidade -->
+<!-- 4. Remover livro -->
+<!-- 5. Sair -->
+
+<!-- Cada opção deve chamar a função correspondente. -->
+<!-- Commit esperado: "Etapa 6 - Menu interativo no console" -->

@@ -118,3 +118,34 @@ def remover_livro (id_livro):
         if conn:
             conn.close()
 # Commit esperado: "Etapa 5 - Função de remoção de livros implementada"
+# Etapa 6 – Menu Interativo
+def menu():
+    while True:
+        print("\nMenu da Biblioteca")
+        print("1. Cadastrar Livro")
+        print("2. Listar Livros")
+        print("3. Atualizar Disponibilidade")
+        print("4. Remover Livro")
+        print("5. Sair")
+        
+        escolha = input("Escolha uma opção: ")
+        
+        if escolha == '1':
+            titulo = input("Título: ")
+            autor = input("Autor: ")
+            ano = int(input("Ano: "))
+            cadastrar_livro(titulo, autor, ano)
+        elif escolha == '2':
+            listar_livro()
+        elif escolha == '3':
+            id_livro = int(input("ID do livro para atualizar disponibilidade: "))
+            atualizar_disponibilidade(id_livro)
+        elif escolha == '4':
+            id_livro = int(input("ID do livro para remover: "))
+            remover_livro(id_livro)
+        elif escolha == '5':
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+            # <!-- Etapa 6 – Menu Interativo no Console -->
