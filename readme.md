@@ -78,3 +78,36 @@ Validação e tratamento básico de erros.
 Estruturação de código Python em funções reutilizáveis.
 
 Desenvolvimento de sistemas com menus interativos em terminal.
+Cadastro de Livros
+
+Insere novos livros no banco de dados com título, autor e ano.
+
+Todo livro é automaticamente marcado como "Disponível".
+
+📚 Listagem de Livros
+
+Exibe todos os livros cadastrados com os seguintes dados:
+
+ID
+
+Título
+
+Autor
+
+Ano
+
+Disponibilidade
+
+🔄 Atualização de Disponibilidade
+
+Permite alternar a disponibilidade do livro entre "Sim" e "Não".
+
+🗑️ Remoção de Livros
+
+Remove livros permanentemente do banco com base no ID.
+
+🧭 Menu Interativo
+
+Menu de navegação por texto para acessar todas as funcionalidades.
+
+Interface amigável e simples para facilitar o uso por qualquer usuá
