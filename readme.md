@@ -59,3 +59,22 @@ Atualizar o status de disponibilidade dos livros
 Remover livros do sistema
 
 A aplicação roda em modo console, com um menu interativo que facilita o uso. É ideal para fins didáticos e projetos iniciais de programação, especialmente para quem está aprendendo a trabalhar com bancos de dados relacionais em Python.
+O principal objetivo deste sistema é proporcionar uma forma simples e funcional de registrar, visualizar, atualizar e remover livros de um acervo, reforçando o uso de conceitos fundamentais de:
+
+Programação procedural com Python
+
+Manipulação de banco de dados com SQLite
+
+Interação com o usuário por meio de menus
+
+Organização e estruturação de código por funções
+estudo: 
+Criação de banco de dados e tabelas com SQLite.
+
+Operações CRUD (Create, Read, Update, Delete).
+
+Validação e tratamento básico de erros.
+
+Estruturação de código Python em funções reutilizáveis.
+
+Desenvolvimento de sistemas com menus interativos em terminal.
