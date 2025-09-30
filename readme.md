@@ -30,3 +30,9 @@ disponivel = "Sim". -->
 <!-- • Criar função que altere o campo disponivel: -->
 <!-- o Se estava "Sim", vira "Não". -->
 <!-- o Se estava "Não", vira "Sim". -->
+<!-- terminado -->
+
+<!-- • Criar função remover_livro(id) que remova um livro -->
+<!-- pelo ID. -->
+<!-- Commit esperado: "Etapa 5 - Função de remoção de livros -->
+<!-- implementada" -->

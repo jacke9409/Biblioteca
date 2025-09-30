@@ -67,9 +67,54 @@ def listar_livro():
 # Etapa 4 – Atualização de Disponibilidade
 def atualizar_disponibilidade(id_livro):
     try:
-        conn = sqlite3.connect('biblioteca.db')
+    
+        conn = sqlite3.connect("biblioteca.db")
         cursor = conn.cursor()
-
-        cursor.execute("SELECT disponivel FROM livros WHERE id = ?", (id_livro,))
+        
+        # Verificar a disponibilidade atual do livro
+        cursor.execute("SELECT disponível FROM livros WHERE id = ?", (id_livro,))
         resultado = cursor.fetchone()
-
+        
+        if resultado is None:
+            print("Livro não encontrado.")
+            return
+        
+        disponivel_atual = resultado[0]
+        novo_status = "Não" if disponivel_atual == "Sim" else "Sim"
+        
+        # Atualizar o status de disponibilidade
+        cursor.execute("UPDATE livros SET disponível = ? WHERE id = ?", (novo_status, id_livro))
+        conn.commit()
+        
+        print(f"Disponibilidade do livro com ID {id_livro} atualizada para '{novo_status}'.")
+    except sqlite3.Error as e:
+        print(f"Erro ao atualizar disponibilidade: {e}")        
+    finally:
+        if conn:
+            conn.close()
+# terminado
+# Etapa 5 – Remoção de Livros
+def remover_livro (id_livro):
+    try:
+        conn = sqlite3.connect("biblioteca.db")
+        cursor = conn.cursor()
+        
+        # Verificar se o livro existe
+        cursor.execute("SELECT * FROM livros WHERE id = ?", (id_livro,))
+        resultado = cursor.fetchone()
+        
+        if resultado is None:
+            print("Livro não encontrado.")
+            return
+        
+        # Remover o livro
+        cursor.execute("DELETE FROM livros WHERE id = ?", (id_livro,))
+        conn.commit()
+        
+        print(f"Livro com ID {id_livro} removido com sucesso.")
+    except sqlite3.Error as e:
+        print(f"Erro ao remover livro: {e}")
+    finally:
+        if conn:
+            conn.close()
+# Commit esperado: "Etapa 5 - Função de remoção de livros implementada"
