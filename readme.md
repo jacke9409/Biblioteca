@@ -47,3 +47,15 @@ disponivel = "Sim". -->
 
 <!-- Cada opção deve chamar a função correspondente. -->
 <!-- Commit esperado: "Etapa 6 - Menu interativo no console" -->
+
+Este é um projeto simples em Python que utiliza SQLite para gerenciar um banco de dados de livros. O sistema permite cadastrar, listar, atualizar e remover livros, com um menu interativo para facilitar o uso.
+
+Cadastrar novos livros
+
+Listar todos os livros disponíveis
+
+Atualizar o status de disponibilidade dos livros
+
+Remover livros do sistema
+
+A aplicação roda em modo console, com um menu interativo que facilita o uso. É ideal para fins didáticos e projetos iniciais de programação, especialmente para quem está aprendendo a trabalhar com bancos de dados relacionais em Python.
