@@ -148,4 +148,10 @@ def menu():
             break
         else:
             print("Opção inválida. Tente novamente.")
-            # <!-- Etapa 6 – Menu Interativo no Console -->
+if __name__ == "__main__":
+           
+        menu()
+        criar_tabela()
+        listar_livros()
+    
+    
